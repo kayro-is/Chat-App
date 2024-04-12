@@ -4,9 +4,6 @@
     align-items: center;
     justify-content: space-between;
 
- 
-
-
     .User {
         display: flex;
         align-items: center;
@@ -21,7 +18,7 @@
     }
     .icons {
         display: flex;
-        gap: 20px;
+        gap: 30px;
 
         img {
             width: 20px;
