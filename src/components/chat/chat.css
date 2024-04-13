@@ -57,6 +57,72 @@
     .center{
         padding: 20px;
         flex: 1;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        &::-webkit-scrollbar {
+            width: 2px;  
+        }
+    
+        &::-webkit-scrollbar-thumb {
+            background-color: rgb(229, 144, 16);  
+            border-radius: 10px;  
+            &:hover {
+                background-color: grey;  
+            }
+        }
+    
+        &::-webkit-scrollbar-track {
+            background: #f1f1f1;  
+        }
+        .message {
+            max-width: 70%;
+            display: flex;
+            gap: 20px;
+
+            &.own{
+                align-self: flex-end;
+
+                .texts {
+                    p {
+                        background-color: #23bad4;
+                    }
+                }
+            }
+            img{
+                width: 30px;
+                height: 30px;
+                border-radius: 50%;
+                object-fit: cover;
+            }  
+                .texts {
+                 flex: 1;
+                 display: flex;
+                 flex-direction: column;
+                 gap: 5px;
+
+                 img {
+                    width: 100%;
+                    height: 800px;
+                    border-radius: 10px;
+                    object-fit: cover;
+                 }
+
+                 p{
+                    padding: 20px;
+                    background-color:#cd8f5f ;
+                    border-radius: 10px;
+                 }
+
+                 span {
+                    font-size: 13px;
+
+                 }
+                }
+              
+        }
     }
     .bottom{
         padding: 20px;
@@ -79,7 +145,7 @@
 
         input {
             flex: 1;
-            background-color: #282533;
+            background-color: rgba(98, 34, 97, 0.3);
             border: none;
             outline: none;
             color: white;

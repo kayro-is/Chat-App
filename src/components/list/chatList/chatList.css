@@ -8,7 +8,7 @@
     }
 
     &::-webkit-scrollbar-thumb {
-        background-color: darkgrey;  
+        background-color: rgb(229, 144, 16); ;  
         border-radius: 10px;  
         &:hover {
             background-color: grey;  
@@ -27,7 +27,7 @@
 
         .searchBar {
             flex: 1;
-            background-color: #282533;
+            background-color: rgba(8, 12, 24, 0.3);
             display: flex;
             align-items: center;
             gap: 20px;
