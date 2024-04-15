@@ -46,6 +46,7 @@ const handleLogin = e => {
             <input type="text" placeholder="nom d'utilisateur" name="nom d'utilisateur" />
             <input type="text" placeholder='Email' name='email' />
             <input type="password" placeholder='Password' name='password'/>
+            
             <button>{"s'inscrire"}</button>
         </form>
       </div>
