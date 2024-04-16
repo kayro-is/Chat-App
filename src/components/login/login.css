@@ -57,6 +57,11 @@
                 transition: all 0.3s;
                 font-weight:500;
 
+                &:disabled{
+                    cursor: not-allowed;
+                    background-color: #f6852392;
+                }
+
 
                 &:hover{
                     background-color: #702968;
