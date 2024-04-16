@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import "./login.css";
 import { toast } from 'react-toastify';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
-import { auth } from '../../lib/firebase';
+import { auth, db } from '../../lib/firebase';
+import { doc, setDoc } from 'firebase/firestore';
 
 const Login = () => {
 
@@ -31,6 +32,18 @@ const handleRegister = async (e) => {
 
     const response = await createUserWithEmailAndPassword(auth,email,password);
 
+    await setDoc(doc(db, "users", response.user.uid), {
+        username,
+        email,
+        id:response.user.uid,
+        blocked:[],
+      });
+
+    await setDoc(doc(db, "userchats", response.user.uid), {
+       chats:[]
+      });
+     
+      toast.success("Compte créé 🎊🎉!! vous pouvez vous connecter maintenant!");
  }catch(err){
     console.log(err);
     toast.error(err.message)
